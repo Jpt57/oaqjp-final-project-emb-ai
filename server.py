@@ -10,6 +10,10 @@ def emotion_detection_app():
     # Obtain the result from the emotion_detector function
     result = emotion_detector(text_to_analyze)
 
+    for i in result:
+       if result[i] == None:
+        return "Invalid text! Please try again!"
+
     anger_score = result["anger"]
     disgust_score = result["disgust"]
     fear_score = result["fear"]
@@ -26,6 +30,8 @@ def emotion_detection_app():
 def render_index_page():
 
     return render_template('index.html')
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
