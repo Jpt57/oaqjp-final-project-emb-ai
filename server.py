@@ -22,7 +22,7 @@ def emotion_detection_app():
     dominant_emotion = result['dominant_emotion']
 
     # Return the following string
-    response = f"For the given statement, the system response is 'anger': {anger_score}, 'disgust': {disgust_score}, 'fear': {fear_score}, 'joy': {joy_score}, and 'sadness': {sadness_score}. The dominant emotion is <b> {dominant_emotion}. </b>"
+    response = f"For the given statement, the system response is 'anger': {anger_score}, 'disgust': {disgust_score}, 'fear': {fear_score}, 'joy': {joy_score} and 'sadness': {sadness_score}. The dominant emotion is <b> {dominant_emotion}. </b>"
 
     return response
 
